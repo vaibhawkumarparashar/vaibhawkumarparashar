@@ -1,0 +1,367 @@
+/* Resume Page Styles */
+.resume-section {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 200px); /* Adjust based on your footer height */
+  position: relative;
+  overflow: hidden;
+}
+
+.section-content {
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  margin-bottom: 40px;
+}
+
+.subtitle {
+  color: #007bff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.title-separator {
+  width: 80px;
+  height: 3px;
+  background: #007bff;
+  margin: 0 auto;
+}
+
+/* Card Styles */
+.experience-card,
+.education-card,
+.skills-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.experience-card:hover,
+.education-card:hover,
+.skills-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-header i {
+  font-size: 24px;
+  color: #007bff;
+  margin-right: 15px;
+}
+
+.card-header h2 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #2c3e50;
+}
+
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e9ecef;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -34px;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #007bff;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #007bff;
+}
+
+.timeline-content {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateX(5px);
+}
+
+/* Experience & Education Headers */
+.experience-header,
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.experience-header h3,
+.education-header h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  color: #2c3e50;
+}
+
+.badge {
+  background: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Skills Tags */
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.skills-tags span {
+  background: #e9ecef;
+  color: #2c3e50;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.skills-tags span:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+/* Achievement List */
+.achievement-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+}
+
+.achievement-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #6c757d;
+}
+
+.achievement-list li:last-child {
+  margin-bottom: 0;
+}
+
+.achievement-list li i {
+  color: #28a745;
+  margin-right: 10px;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  gap: 25px;
+}
+
+.skill-category h4 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.skill-category h4 i {
+  margin-right: 10px;
+  color: #007bff;
+}
+
+.skill-bar {
+  margin-bottom: 20px;
+}
+
+.skill-bar:last-child {
+  margin-bottom: 0;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: #007bff;
+  border-radius: 4px;
+}
+
+/* Education Details */
+.education-details {
+  margin-top: 15px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #6c757d;
+}
+
+.detail-item:last-child {
+  margin-bottom: 0;
+}
+
+.detail-item i {
+  color: #007bff;
+  margin-right: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes progressFill {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--progress-width);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slide-up {
+  opacity: 0;
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+/* .animate-progress {
+  animation: progressFill 1.5s ease-out forwards;
+} */
+
+/* Stagger animations for cards */
+.experience-card {
+  animation-delay: 0.2s;
+}
+
+.education-card {
+  animation-delay: 0.4s;
+}
+
+.skills-card {
+  animation-delay: 0.6s;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .resume-section {
+    padding: 60px 0;
+  }
+
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .card-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .experience-header h3,
+  .education-header h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .resume-section {
+    padding: 40px 0;
+  }
+  
+  .section-title {
+    margin-bottom: 30px;
+  }
+  
+  .main-title {
+    font-size: 1.8rem;
+  }
+  
+  .timeline {
+    padding-left: 20px;
+  }
+  
+  .timeline-dot {
+    left: -24px;
+  }
+
+  .experience-card,
+  .education-card,
+  .skills-card {
+    padding: 20px;
+  }
+} 
