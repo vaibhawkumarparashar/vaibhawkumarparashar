@@ -2,14 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import AboutPage from './pages/About';
-import Layout from './components/Layout';
-import Banner from './components/Banner';
-import About from './components/About';
-import Technology from './components/Technology';
-import MySelf from './components/MySelf';
-import Resume from './components/Resume';
-import Experience from './components/Experience';
-import Contact from './components/Contact';
+import ContactPage from './pages/Contact';
 
 function App() {
   return (
@@ -17,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} /> 
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </Router>
   );
