@@ -29,9 +29,6 @@ const Header = () => {
                   <Link to="/resume"><span><i className="fas fa-list-alt"></i></span>Resume</Link>
                 </li>
                 <li>
-                  <Link to="/blog"><span><i className="fab fa-blogger"></i></span>Blog</Link>
-                </li>
-                <li>
                   <Link to="/contact"><span><i className="fas fa-phone-alt"></i></span>Contact</Link>
                 </li>
               </ul>
