@@ -18,7 +18,7 @@ const Header = () => {
 
             <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
               <ul className="navbar-nav">
-                <li className="current sa-dropdown"><a href="#home"><span><i
+                <li className="sa-dropdown"><a href="#home"><span><i
                   className="fas fa-home"></i></span>Home</a>
                   <ul className="sa-dropdown-menu">
                     <li><a href="index.html">Home V-1</a></li>

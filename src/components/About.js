@@ -10,7 +10,7 @@ function About() {
                         <div className="row">
                             <div className="col-lg-5">
                                 <div className="about-thumb">
-                                    <img src="assets/images/others/about-thumb.png" alt="Image" className="img-fluid"/>
+                                    <img src="assets/images/others/about-thumb.jpg" alt="Image" className="img-fluid"/>
                                 </div>
                             </div>
                             <div className="col-lg-7">

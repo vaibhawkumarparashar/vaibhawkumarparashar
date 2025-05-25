@@ -50,7 +50,7 @@ export default function Contact() {
                                 <div className="form-content">
                                     <h3>Type Message</h3>
                                     <form id="contactform" className="contact-form" action="mail.php" method="post"
-                                        enctype="text/plain" novalidate="novalidate">
+                                        encType="text/plain" noValidate="novalidate">
                                         <input className="form-control" name="name" type="text" placeholder="Name*" value=""
                                             size="30" aria-required="true" required="required"/>
 
