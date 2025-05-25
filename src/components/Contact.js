@@ -1,6 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function Contact() {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Add your form submission logic here
+        console.log(formData);
+    };
+
     return (
         <>
         <div id="contact" className="sa-section">
@@ -49,21 +70,50 @@ export default function Contact() {
                             <div className="col-md-8">
                                 <div className="form-content">
                                     <h3>Type Message</h3>
-                                    <form id="contactform" className="contact-form" action="mail.php" method="post"
-                                        encType="text/plain" noValidate="novalidate">
-                                        <input className="form-control" name="name" type="text" placeholder="Name*" value=""
-                                            size="30" aria-required="true" required="required"/>
+                                    <form id="contactform" className="contact-form" onSubmit={handleSubmit} noValidate>
+                                        <input 
+                                            className="form-control" 
+                                            name="name" 
+                                            type="text" 
+                                            placeholder="Name*" 
+                                            value={formData.name}
+                                            onChange={handleChange}
+                                            size="30" 
+                                            aria-required="true" 
+                                            required
+                                        />
 
-                                        <input className="form-control" name="email" type="email"
-                                            placeholder="Email address" value="" size="30" aria-required="true"
-                                            required="required"/>
+                                        <input 
+                                            className="form-control" 
+                                            name="email" 
+                                            type="email"
+                                            placeholder="Email address" 
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                            size="30" 
+                                            aria-required="true"
+                                            required
+                                        />
 
-                                        <input className="form-control" name="phone" type="text"
-                                            placeholder="Phone number / website (optional)" value="" size="30"
-                                            aria-required="true" required="required"/>
+                                        <input 
+                                            className="form-control" 
+                                            name="phone" 
+                                            type="text"
+                                            placeholder="Phone number / website (optional)" 
+                                            value={formData.phone}
+                                            onChange={handleChange}
+                                            size="30"
+                                        />
 
-                                        <textarea name="message" className="form-control" required="required" rows="7"
-                                            placeholder="Message..."></textarea>
+                                        <textarea 
+                                            name="message" 
+                                            className="form-control" 
+                                            required 
+                                            rows="7"
+                                            placeholder="Message..."
+                                            value={formData.message}
+                                            onChange={handleChange}
+                                        ></textarea>
                                         <div className="flashinfo"></div>
                                         <input type="submit" className="btn btn-primary btn-l" value="Send Your Message"/>
                                     </form>

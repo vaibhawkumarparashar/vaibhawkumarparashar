@@ -1,4 +1,7 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import AboutPage from './pages/About';
 import Layout from './components/Layout';
 import Banner from './components/Banner';
 import About from './components/About';
@@ -10,17 +13,12 @@ import Contact from './components/Contact';
 
 function App() {
   return (
-    <>
-    <Banner/>
-    <Layout>
-      <About/>
-      <Technology/>
-      <MySelf/>
-      <Resume/>
-      <Experience/>
-      <Contact/>
-    </Layout>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutPage />} /> 
+      </Routes>
+    </Router>
   );
 }
 
